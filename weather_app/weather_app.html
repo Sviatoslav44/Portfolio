@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Weather App</title>
+		<link rel="stylesheet" href="./style_weather.css" />
+
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+		/>
+
+		<link rel="stylesheet" href="css/style_weather.css" />
+	</head>
+
+	<body>
+		<canvas id="pixie"></canvas>
+		<h1 class="tittle">Weather App</h1>
+		<div class="wrapper">
+			<div class="shape shape-1"></div>
+			<div class="shape shape-2"></div>
+			<div class="container">
+				<div class="search-container">
+					<input
+						type="text"
+						placeholder="Enter city name"
+						id="city"
+						value="Luxembourg"
+					/>
+					<button id="search-btn">Search</button>
+				</div>
+				<div id="result"></div>
+			</div>
+		</div>
+
+		<script src="js/weather.js"></script>
+		<script src="js/key.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="./script_weather.js"></script>
+	</body>
+</html>

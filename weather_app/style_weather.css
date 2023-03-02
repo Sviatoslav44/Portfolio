@@ -1,0 +1,268 @@
+@font-face {
+	font-family: 'Arkhip';
+	src: url('fonts/arkhip.eot'); /* IE9 Compat Modes */
+	src: url('fonts/arkhip.eot?#iefix') format('embedded-opentype'),
+		/* IE6-IE8 */ url('fonts/arkhip.otf') format('opentype'),
+		/* Open Type Font */ url('fonts/arkhip.svg') format('svg'),
+		/* Legacy iOS */ url('fonts/arkhip.ttf') format('truetype'),
+		/* Safari, Android, iOS */ url('fonts/arkhip.woff') format('woff'),
+		/* Modern Browsers */ url('fonts/arkhip.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Arkhip';
+}
+
+h4 {
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+h1 {
+	text-align: center;
+}
+
+:root {
+	--rose: #e5b5c9;
+	--violet: #3c3261;
+	--dark-violet: #0e1238;
+	--border-color: #5b557a;
+	--transp-white-1: rgba(255, 255, 255, 0.25);
+	--transp-white-2: rgba(255, 255, 255, 0.1);
+	--shadow: rgba(3, 46, 87, 0.2);
+}
+
+body {
+	height: 100vh;
+	background-image: linear-gradient(var(--dark-violet), var(--violet));
+}
+
+.tittle {
+	position: absolute;
+	right: 30%;
+	left: 30%;
+	top: 4%;
+	color: var(--rose);
+	font-size: 50px;
+}
+
+.wrapper {
+	font-size: 16px;
+	width: 90vw;
+	max-width: 28em;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 53%;
+	left: 50%;
+}
+
+.container {
+	width: 100%;
+	background: var(--transp-white-2);
+	backdrop-filter: blur(10px);
+	padding: 3em 1.8em;
+	border: 2px solid var(--transp-white-2);
+	border-radius: 0.6em;
+	text-align: center;
+}
+
+.shape {
+	position: absolute;
+	background-image: linear-gradient(var(--violet), var(--dark-violet));
+	backdrop-filter: blur(1.2em);
+	border: 2px solid var(--border-color);
+	border-radius: 50%;
+}
+
+.shape-1 {
+	height: 11em;
+	width: 11em;
+	right: -4em;
+	bottom: -4.5em;
+}
+
+.shape-2 {
+	height: 11em;
+	width: 11em;
+	top: -3em;
+	left: -3.5em;
+}
+
+.search-container {
+	font-size: 1em;
+	display: grid;
+	grid-template-columns: 9fr 3fr;
+	gap: 1.25em;
+}
+
+.search-container input,
+.search-container button {
+	outline: none;
+	font-size: 1em;
+	border: none;
+}
+
+.search-container input {
+	padding: 0.7em;
+	background-color: transparent;
+	border-bottom: 2px solid var(--transp-white-1);
+	color: var(--rose);
+	font-weight: 300;
+}
+
+.search-container input::placeholder {
+	color: var(--rose);
+}
+
+.search-container input:focus {
+	border-color: var(--rose);
+}
+
+.search-container button {
+	color: var(--rose);
+	background-color: var(--violet);
+	border: 2px solid var(--transp-white-1);
+	border-radius: 0.3em;
+	cursor: pointer;
+}
+
+.search-container button:hover {
+	border-color: var(--rose);
+}
+
+#result h2 {
+	color: var(--rose);
+	text-transform: uppercase;
+	letter-spacing: 0.18em;
+	font-weight: 600;
+	margin: 1.25em 0 0.75em 0;
+}
+
+.weather,
+.desc {
+	color: var(--rose);
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-size: 0.9em;
+	font-weight: 500;
+	line-height: 2em;
+}
+
+.weather {
+	margin-top: -0.7em;
+}
+
+#result img {
+	margin: 0.6em 0 0 0;
+	width: 6.2em;
+	filter: drop-shadow(0 1.8em 3.7em var(--shadow));
+}
+
+#result h1 {
+	font-size: 4em;
+	margin: 0.3em 0 0.7em 0;
+	line-height: 0;
+	font-weight: 400;
+	color: var(--rose);
+	margin-left: 35px;
+}
+
+.temp-container {
+	display: flex;
+	justify-content: center;
+}
+
+.temp-container div {
+	padding: 0.3em 1em;
+}
+
+.temp-container div:first-child {
+	border-right: 2px solid var(--transp-white-1);
+}
+
+.temp-container .title {
+	font-weight: 600;
+	color: var(--rose);
+}
+
+.temp-container .temp {
+	font-weight: 300;
+	color: var(--rose);
+}
+
+.msg {
+	margin-top: 1.8em;
+	color: var(--rose);
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+img {
+	padding-bottom: 25px;
+}
+
+@media screen and (max-width: 450px) {
+	.wrapper {
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 1400px) {
+	.tittle {
+		display: none;
+	}
+}
+@media screen and (max-width: 700px) {
+	.shape {
+		display: none;
+	}
+}
+
+/* fon */
+
+#pixie {
+	position: fixed;
+	background-image: linear-gradient(var(--violet), var(--dark-violet));
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='var(--dark-violet)', endColorstr=var(--violet), GradientType=0);
+	/* IE6-9 */
+	background: -ms-linear-gradient(
+		top,
+		var(--dark-violet) 50%,
+		var(--violet) 50%
+	);
+	/* IE10+ */
+	background: -webkit-gradient(
+		linear,
+		center top,
+		center bottom,
+		from(var(--dark-violet)),
+		to(var(--violet))
+	);
+	/* Chrome, Safari 4+ */
+	background: -webkit-linear-gradient(
+			center top,
+			var(--dark-violet),
+			var(--violet)
+		)
+		repeat scroll 0 0 rgba(0, 0, 0, 0);
+	/* Chrome 10-25, iOS 5+, Safari 5.1+ */
+	background: -moz-linear-gradient(
+			center top,
+			var(--dark-violet),
+			var(--violet)
+		)
+		repeat scroll 0 0 rgba(0, 0, 0, 0);
+	/* Firefox 3.6-15 */
+	background: -o-linear-gradient(center top, var(--dark-violet), var(--violet))
+		repeat scroll 0 0 rgba(0, 0, 0, 0);
+	/* Opera 11.10-12.00 */
+	background: linear-gradient(center top, var(--dark-violet), var(--violet))
+		repeat scroll 0 0 rgba(0, 0, 0, 0);
+	/* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+	margin: 0;
+	padding: 0;
+	background-size: 100% 100%;
+}
